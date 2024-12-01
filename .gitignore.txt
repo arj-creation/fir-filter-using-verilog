@@ -1,0 +1,13 @@
+# Vivado directories to ignore
+*.jou
+*.log
+*.str
+*.wdb
+*.dmp
+*.backup
+*.log
+*.runs/
+*.cache/
+*.hw/
+*.sim/
+*.ip_user_files/

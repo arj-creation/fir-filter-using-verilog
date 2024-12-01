@@ -1,0 +1,311 @@
+
+*** Running vivado
+    with args -log fir.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source fir.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source fir.tcl -notrace
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 393.590 ; gain = 44.906
+Command: synth_design -top fir -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 10556
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 831.781 ; gain = 413.066
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fir' [C:/Users/arjun/Documents/project/fir/mystuff/fir.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'fir' (0#1) [C:/Users/arjun/Documents/project/fir/mystuff/fir.sv:3]
+WARNING: [Synth 8-6014] Unused sequential element delayed_signal_reg[8] was removed.  [C:/Users/arjun/Documents/project/fir/mystuff/fir.sv:30]
+WARNING: [Synth 8-6014] Unused sequential element prod_reg[8] was removed.  [C:/Users/arjun/Documents/project/fir/mystuff/fir.sv:39]
+WARNING: [Synth 8-6014] Unused sequential element sum_0_reg[4] was removed.  [C:/Users/arjun/Documents/project/fir/mystuff/fir.sv:45]
+WARNING: [Synth 8-6014] Unused sequential element sum_1_reg[2] was removed.  [C:/Users/arjun/Documents/project/fir/mystuff/fir.sv:54]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 921.680 ; gain = 502.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 921.680 ; gain = 502.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 921.680 ; gain = 502.965
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+WARNING: [Synth 8-3936] Found unconnected internal register 'sum_3_reg' and it is trimmed from '36' to '34' bits. [C:/Users/arjun/Documents/project/fir/mystuff/fir.sv:67]
+WARNING: [Synth 8-3936] Found unconnected internal register 'sum_2_reg[0]' and it is trimmed from '35' to '34' bits. [C:/Users/arjun/Documents/project/fir/mystuff/fir.sv:61]
+WARNING: [Synth 8-3936] Found unconnected internal register 'sum_2_reg[1]' and it is trimmed from '35' to '34' bits. [C:/Users/arjun/Documents/project/fir/mystuff/fir.sv:61]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 921.680 ; gain = 502.965
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   34 Bit       Adders := 1     
++---Registers : 
+	               34 Bit    Registers := 2     
+	               33 Bit    Registers := 1     
+	               16 Bit    Registers := 9     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3936] Found unconnected internal register 'sum_3_reg' and it is trimmed from '34' to '30' bits. [C:/Users/arjun/Documents/project/fir/mystuff/fir.sv:67]
+WARNING: [Synth 8-3936] Found unconnected internal register 'sum_2_reg[0]' and it is trimmed from '34' to '30' bits. [C:/Users/arjun/Documents/project/fir/mystuff/fir.sv:61]
+WARNING: [Synth 8-3936] Found unconnected internal register 'sum_1_reg[0]' and it is trimmed from '34' to '30' bits. [C:/Users/arjun/Documents/project/fir/mystuff/fir.sv:54]
+WARNING: [Synth 8-3936] Found unconnected internal register 'sum_2_reg[1]' and it is trimmed from '33' to '30' bits. [C:/Users/arjun/Documents/project/fir/mystuff/fir.sv:61]
+WARNING: [Synth 8-3936] Found unconnected internal register 'sum_0_reg[0]' and it is trimmed from '33' to '30' bits. [C:/Users/arjun/Documents/project/fir/mystuff/fir.sv:45]
+DSP Report: Generating DSP prod_reg[4], operation Mode is: (A''*(B:0x160f))'.
+DSP Report: register delayed_signal_reg[3] is absorbed into DSP prod_reg[4].
+DSP Report: register delayed_signal_reg[4] is absorbed into DSP prod_reg[4].
+DSP Report: register prod_reg[4] is absorbed into DSP prod_reg[4].
+DSP Report: operator p_0_out is absorbed into DSP prod_reg[4].
+DSP Report: Generating DSP sum_0_reg[2], operation Mode is: (PCIN+(ACIN2*(B:0x1496))')'.
+DSP Report: register delayed_signal_reg[5] is absorbed into DSP sum_0_reg[2].
+DSP Report: register sum_0_reg[2] is absorbed into DSP sum_0_reg[2].
+DSP Report: register prod_reg[5] is absorbed into DSP sum_0_reg[2].
+DSP Report: operator p_0_out is absorbed into DSP sum_0_reg[2].
+DSP Report: operator p_0_out is absorbed into DSP sum_0_reg[2].
+DSP Report: Generating DSP prod_reg[6], operation Mode is: (ACIN2*(B:0x1089))'.
+DSP Report: register delayed_signal_reg[6] is absorbed into DSP prod_reg[6].
+DSP Report: register prod_reg[6] is absorbed into DSP prod_reg[6].
+DSP Report: operator p_0_out is absorbed into DSP prod_reg[6].
+DSP Report: Generating DSP sum_0_reg[3], operation Mode is: (PCIN+(ACIN2*(B:0xae4))')'.
+DSP Report: register delayed_signal_reg[7] is absorbed into DSP sum_0_reg[3].
+DSP Report: register sum_0_reg[3] is absorbed into DSP sum_0_reg[3].
+DSP Report: register prod_reg[7] is absorbed into DSP sum_0_reg[3].
+DSP Report: operator p_0_out is absorbed into DSP sum_0_reg[3].
+DSP Report: operator p_13_out is absorbed into DSP sum_0_reg[3].
+DSP Report: Generating DSP sum_1_reg[1], operation Mode is: (PCIN+A:B)'.
+DSP Report: register sum_1_reg[1] is absorbed into DSP sum_1_reg[1].
+DSP Report: operator p_0_out is absorbed into DSP sum_1_reg[1].
+DSP Report: Generating DSP prod_reg[0], operation Mode is: (A2*(B:0x4f6))'.
+DSP Report: register delayed_signal_reg[0] is absorbed into DSP prod_reg[0].
+DSP Report: register prod_reg[0] is absorbed into DSP prod_reg[0].
+DSP Report: operator p_15_out is absorbed into DSP prod_reg[0].
+DSP Report: Generating DSP sum_0_reg[0], operation Mode is: (PCIN+(A''*(B:0xae4))')'.
+DSP Report: register delayed_signal_reg[0] is absorbed into DSP sum_0_reg[0].
+DSP Report: register delayed_signal_reg[1] is absorbed into DSP sum_0_reg[0].
+DSP Report: register sum_0_reg[0] is absorbed into DSP sum_0_reg[0].
+DSP Report: register prod_reg[1] is absorbed into DSP sum_0_reg[0].
+DSP Report: operator p_0_out is absorbed into DSP sum_0_reg[0].
+DSP Report: operator p_14_out is absorbed into DSP sum_0_reg[0].
+DSP Report: Generating DSP prod_reg[2], operation Mode is: (ACIN''*(B:0x1089))'.
+DSP Report: register delayed_signal_reg[1] is absorbed into DSP prod_reg[2].
+DSP Report: register delayed_signal_reg[2] is absorbed into DSP prod_reg[2].
+DSP Report: register prod_reg[2] is absorbed into DSP prod_reg[2].
+DSP Report: operator p_0_out is absorbed into DSP prod_reg[2].
+DSP Report: Generating DSP sum_0_reg[1], operation Mode is: (PCIN+(ACIN''*(B:0x1496))')'.
+DSP Report: register delayed_signal_reg[2] is absorbed into DSP sum_0_reg[1].
+DSP Report: register delayed_signal_reg[3] is absorbed into DSP sum_0_reg[1].
+DSP Report: register sum_0_reg[1] is absorbed into DSP sum_0_reg[1].
+DSP Report: register prod_reg[3] is absorbed into DSP sum_0_reg[1].
+DSP Report: operator p_0_out is absorbed into DSP sum_0_reg[1].
+DSP Report: operator p_0_out is absorbed into DSP sum_0_reg[1].
+DSP Report: Generating DSP sum_1_reg[0], operation Mode is: (PCIN+A:B)'.
+DSP Report: register sum_1_reg[0] is absorbed into DSP sum_1_reg[0].
+DSP Report: operator p_0_out is absorbed into DSP sum_1_reg[0].
+DSP Report: Generating DSP sum_2_reg[0], operation Mode is: (PCIN+A:B)'.
+DSP Report: register sum_2_reg[0] is absorbed into DSP sum_2_reg[0].
+DSP Report: operator p_0_out is absorbed into DSP sum_2_reg[0].
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 1128.500 ; gain = 709.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping                  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fir         | (A''*(B:0x160f))'            | 16     | 14     | -      | -      | 30     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|fir         | (PCIN+(ACIN2*(B:0x1496))')'  | 16     | 14     | -      | -      | 33     | 1    | 0    | -    | -    | -     | 1    | 1    | 
+|fir         | (ACIN2*(B:0x1089))'          | 16     | 14     | -      | -      | 30     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|fir         | (PCIN+(ACIN2*(B:0xae4))')'   | 16     | 13     | -      | -      | 33     | 1    | 0    | -    | -    | -     | 1    | 1    | 
+|fir         | (PCIN+A:B)'                  | 15     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fir         | (A2*(B:0x4f6))'              | 16     | 12     | -      | -      | 28     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|fir         | (PCIN+(A''*(B:0xae4))')'     | 16     | 13     | -      | -      | 30     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|fir         | (ACIN''*(B:0x1089))'         | 16     | 14     | -      | -      | 30     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|fir         | (PCIN+(ACIN''*(B:0x1496))')' | 16     | 14     | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|fir         | (PCIN+A:B)'                  | 12     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fir         | (PCIN+A:B)'                  | 12     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++------------+------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 1129.406 ; gain = 710.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 1129.625 ; gain = 710.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 1130.426 ; gain = 711.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 1130.426 ; gain = 711.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 1130.426 ; gain = 711.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 1130.426 ; gain = 711.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 1130.426 ; gain = 711.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 1130.426 ; gain = 711.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+---------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                  | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+---------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|fir         | delayed_signal_reg[2][15] | 3      | 16    | NO           | NO                 | YES               | 16     | 0       | 
++------------+---------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fir         | (A''*B)'         | 30     | 13     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|fir         | (PCIN+(A'*B)')'  | 0      | 13     | -      | -      | 33     | 1    | 0    | -    | -    | -     | 1    | 1    | 
+|fir         | (A'*B)'          | 0      | 13     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|fir         | (PCIN+(A'*B)')'  | 0      | 12     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 1    | 
+|fir         | (PCIN+A:B)'      | 30     | 18     | -      | -      | 34     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fir         | (A'*B)'          | 30     | 11     | -      | -      | 0      | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|fir         | (PCIN+(A''*B)')' | 30     | 12     | -      | -      | 30     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|fir         | (A''*B)'         | 0      | 13     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|fir         | (PCIN+(A''*B)')' | 0      | 13     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|fir         | (PCIN+A:B)'      | 30     | 18     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fir         | (PCIN+A:B)'      | 30     | 18     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |     8|
+|3     |DSP48E1 |    11|
+|4     |LUT2    |    30|
+|5     |SRL16E  |    16|
+|6     |FDRE    |    62|
+|7     |IBUF    |    17|
+|8     |OBUF    |    16|
++------+--------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   161|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 1130.426 ; gain = 711.711
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 13 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 1130.426 ; gain = 711.711
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 1130.426 ; gain = 711.711
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1142.449 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 19 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1242.836 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 9c574ad8
+INFO: [Common 17-83] Releasing license: Synthesis
+15 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 1242.836 ; gain = 848.984
+INFO: [Common 17-1381] The checkpoint 'C:/Users/arjun/Documents/project/fir/fir.runs/synth_1/fir.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file fir_utilization_synth.rpt -pb fir_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 23 00:28:22 2024...
